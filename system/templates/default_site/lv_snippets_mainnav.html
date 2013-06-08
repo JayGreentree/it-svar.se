@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">		
+		<h1 align=right style="margin-bottom:0px; font-size:48px;">IT-SVAR.SE</h1><span class="pull-right" style="font-size:18px;">Teknikhjälp på Svenska</span><br/>
+		{exp:selected item="{segment_1}" replace="class='active'"}
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</a>
+					<ul class="nav">
+						<li {selected_empty}><a href="/">Hem</a></li>
+						<li class="nav-collapse">
+							<ul class="nav">
+								<li {selected_about}><a href="/about">Om IT-SVAR</a></li>
+								<li {selected_news}><a href="/news">Nyheter</a></li>
+								<li {selected_articles}><a href="/articles">Artiklar</a></li>
+								<li {selected_reviews}><a href="/reviews">Köphjälp</a></li>
+								<li {selected_faq}><a href="/faq">Frågor & Svar</a></li>
+								<li><a href="#searchModal" data-toggle="modal">Sök</a></li>
+								{if segment_1 == "news" OR segment_1 == "articles"}<li><a href="{site_url}{segment_1}/rss" target="_blank"><img src="/assets/images/site_images/rss_icon.png" alt="" style="padding-top:2px" /></a></li>{/if}
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		{/exp:selected}
+		</div>
+	</div>
+</div>

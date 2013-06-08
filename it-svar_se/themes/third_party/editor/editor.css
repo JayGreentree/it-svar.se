@@ -1,0 +1,22 @@
+.redactor_editor {-webkit-user-select:text;-moz-user-select:text;user-select:text;}
+.redactor_editor ul {list-style: disc;}
+
+table.matrix tbody.matrix td.matrix.editor-matrix {padding:0;border:none;}
+table.matrix tbody.matrix tr.matrix-last td.editor-matrix.matrix-focussed {padding:0;}
+table.matrix tbody.matrix td.editor-matrix.matrix-focussed {border:none;}
+
+
+/* IFRAME: VISUAL MODE FIX;
+
+body {background: #f6f6f6 !important;}
+div, p, ul, ol, table, dl, pre, h1, h2, h3, h4, h5, blockquote {
+    background-color: #fff !important;
+    border: 1px solid #e4e4e4 !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+}
+ul, ol {
+    padding-left: 2em !important;
+}
+
+*/

@@ -1,0 +1,53 @@
+<div class="modal fade hide" id="contactModal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">×</button>
+		<h3>Kontakta oss</h3>
+	</div>
+	<div class="form-horizontal">
+		{exp:email:contact_form user_recipients="no" recipients="admin@it-svar.se" charset="utf-8" return="{my_location}"}
+		<fieldset>
+		<div class="modal-body">
+			<legend>Fyll i formuläret nedan</legend>
+			<div class="control-group">
+				<label class="control-label" for="name">Ditt namn:</label>
+				<div class="controls">
+					<input type="text" id="name" value="{member_name}" name="name" class="input-xlarge focused" />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="from">Din E-post:</label>
+				<div class="controls">
+					<input type="text" id="from" value="{member_email}" name="from" class="input-xlarge" />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="subject">Ämne:</label>
+				<div class="controls">
+					<input type="text" id="subject" value="" name="subject" class="input-xlarge" />
+				</div>
+			</div>
+			{if captcha}
+			<div class="control-group">
+				<label class="control-label" for="captcha">Skriv av texten i bilden nedan:</label>
+				<div class="controls">
+					<input type="text" id="captcha" value="" name="captcha" class="input-xlarge" />
+				</div>
+			</div>
+			{/if}
+			<div class="control-group">
+				<label class="control-label" for="message">Meddelande:</label>
+				<div class="controls">
+					<textarea type="textarea" class="input-xlarge" id="message" name="message" rows="5"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			{if captcha}
+			<span style="float:left;">{captcha}</span>
+			{/if}
+			<input type="submit" class="btn btn-primary" value="Skicka" />
+		</div>
+		</fieldset>
+		{/exp:email:contact_form}
+	</div>
+</div>

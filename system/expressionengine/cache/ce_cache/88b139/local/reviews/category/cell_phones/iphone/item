@@ -1,0 +1,75 @@
+a:3:{s:3:"ttl";i:3600;s:4:"made";i:1369736772;s:7:"content";s:2826:"<div class="container white">
+	<div class="row">
+		<div class="span12">
+			<div class="page-header">
+									<h1 style="padding-left:10px;">K&ouml;phj&auml;lp om&nbsp;iPhone</h1>
+							</div>
+			
+			<ul class="nav nav-tabs">
+				<li class="">
+					<a href="/reviews">Samtliga</a>
+				</li>
+				
+											<li class="dropdown ">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Datorer<b class="caret"></b></a>
+																																									<ul class="dropdown-menu">
+																<li><a href="/reviews/category/computers/mac">Mac</a></li>
+																																				<li><a href="/reviews/category/computers/pc">PC</a></li>
+																<li class="divider"></li>
+						<li><a href="/reviews/category/computers">Alla Datorer</a></li>
+						</ul>
+																</li>
+																<li class="dropdown active">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Mobiltelefoner<b class="caret"></b></a>
+																																									<ul class="dropdown-menu">
+																<li><a href="/reviews/category/cell_phones/iphone">iPhone</a></li>
+																																				<li><a href="/reviews/category/cell_phones/android">Android</a></li>
+																																				<li><a href="/reviews/category/cell_phones/windows_phone">Windows Phone</a></li>
+																<li class="divider"></li>
+						<li><a href="/reviews/category/cell_phones">Alla Mobiltelefoner</a></li>
+						</ul>
+																</li>
+																<li class="dropdown ">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Foto<b class="caret"></b></a>
+																																									<ul class="dropdown-menu">
+																<li><a href="/reviews/category/photo/compact_cameras">Kompaktkameror</a></li>
+																																				<li><a href="/reviews/category/photo/slr">Systemkameror</a></li>
+																																				<li><a href="/reviews/category/photo/lenses">Objektiv</a></li>
+																																				<li><a href="/reviews/category/photo/photo_accessories">Tillbehör</a></li>
+																<li class="divider"></li>
+						<li><a href="/reviews/category/photo">Alla Foto</a></li>
+						</ul>
+																</li>
+									<li class="pull-right">
+				
+				{if logged_in}
+					<a href="reviews/new">Skriv en egen Artikel</a>
+				{/if}
+				
+				</li>
+			</ul>
+			
+			
+		</div>
+	</div>
+</div>
+<div class="container white">
+	<div class="row">
+		<div class="span12">
+			<div class="padded rounded_all clearfix" style="margin-top:16px;">
+				<h2>Taggmoln:</h2>
+				<center>
+					 
+				</center>
+			</div> 
+		</div>
+	</div>
+<footer class="footer" style="padding:6px;">
+	<hr style="margin-bottom:0px;"/>
+	<span>2013-05-28 - 12:26</span>
+	<span class="pull-right">{lv_content_copyright}</span>
+</footer>
+
+</div>
+
+";}

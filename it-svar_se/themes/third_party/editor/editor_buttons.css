@@ -1,0 +1,5 @@
+#redactor_paste_plaintext_area {border:1px solid #8195A0; border-radius:3px 3px 3px 3px; overflow:scroll; width: 99%; height: 300px;}
+#redactor_paste_plaintext_area p {margin:0 0 10px}
+
+#EditorPackStyles {}
+#EditorPackStyles a:hover {background-color:#fff;}

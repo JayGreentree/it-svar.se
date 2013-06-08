@@ -1,0 +1,1 @@
+<div class="FirstDrop"><?=lang('form:first_drop_exp')?> <span class="move"></span></div>

@@ -1,0 +1,70 @@
+#mainContent .pageContents {padding:0 0 10px !important; border-top:0 !important;}
+
+#dbody {padding:10px;}
+
+.dmenu {background-color: #c8d2d7; background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))); background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); background-image:linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); overflow:auto; padding:3px 3px 6px 17px; -moz-box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset; -webkit-box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset; -o-box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset; box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset;}
+.dmenu li {float:left; margin:0; padding:2px;}
+.dmenu li a {background:#ABB7C3; color:#fff !important; font-size:11px; font-weight:bold; margin:3px 7px 0 0; padding:5px 10px 5px 10px; display:block; text-decoration:none; text-transform:uppercase; border-radius:5px;}
+.dmenu li.current {}
+.dmenu li.current a, .dmenu li a:hover {color:#fff; font-weight:bold; background:#27343C; text-shadow:0 -1px 0 rgba(0, 0, 0, 0.2); -moz-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset; -webkit-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset; -o-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset; box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset;}
+
+#process_form {float:left; width:48%; margin-right:1%;}
+#process_log {float:left; width:49%;}
+
+.editor_fieldtype_toggler {font-size:12px; font-weight:normal; position:absolute;right:0;top:2px;display:none;}
+.editor_fieldtype_toggler small {margin-top:3px; margin-left: 0 !important;}
+.editor_fieldtype_toggler input {position:relative; top:1px;}
+.editor_fieldtype_toggler strong {margin-right:15px;color:darkred;}
+
+.dtable {background:#ECF1F4; border:1px solid #ccc; border:1px solid rgba(0, 0, 0, 0.2); border-bottom-color:rgba(0, 0, 0, 0.4); margin-bottom:18px; margin-top:9px; -moz-box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; -webkit-box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; -o-box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; }
+.dtable h2 {background:#fff; border-bottom:1px solid rgba(0, 0, 0, 0.2); color:#37444D; margin:0; padding:9px; font-size:16px;position:relative;}
+.dtable table {border-spacing:0; border-collapse:collapse; margin:-1px 0 0 0 !important; border-bottom:1px solid #c5ced4; width:100%; }
+.dtable table tbody tr:nth-child(even) {background-color:#F6F8FA;}
+.dtable table label {font-size:12px; width:200px;}
+.dtable table th, .dtable table td {border-color:#c5ced4; border-width:1px 1px 0 0; border-style:solid; border-right-style:dotted; padding:7px 9px; text-align:left;}
+.dtable table tr th:last-child, .dtable table tr td:last-child {border-right:none;}
+.dtable table thead {background:#9aa9b3; background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))); background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); background-image:linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); color:#fff; font-size:12px;}
+.dtable table thead th {border-right:1px solid #849099; border-top:1px solid #849099; border-bottom:1px solid #849099; text-shadow:rgba(0, 0, 0, 0.5) 0 -1px 0; }
+.dtable td.action {width:200px;}
+.dtable td.state {width:75px;text-align:center;}
+.dtable thead .heading th {color:#5F6C74; font-weight:bold; background-color: #c8d2d7;background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);background-image: linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);border: 1px solid rgba(0, 0, 0, 0.2);margin: 0 0 18px 0;overflow: auto;padding:7px;-moz-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 0 inset;-webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 0 inset;-o-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 0 inset;box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 0 inset; text-shadow:1px 1px 1px rgba(255, 255, 255, 0.7);}
+.dtable .subtable {padding:0}
+.dtable .subtable table {border:0}
+.dtable h2 .options {display:block;float:right;font-size:12px;}
+.dtable h2 small {font-size:10px;margin-left:10px;}
+
+.DFTable {width:100%; border:1px solid #b6c0c2; border-radius:3px; -webkit-border-radius: 3px; -moz-border-radius:4px;}
+.DFTable thead {background:none !important}
+.DFTable thead tr {background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))) !important; background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)) !important;}
+.DFTable th {text-align:left; font-size:12px; color:#505050 !important; line-height:13px; border-bottom:1px solid #BBB; text-shadow:0 1px #fff; padding:5px 10px 6px 10px; border-left:0; border-top:0; text-shadow: none; border-right:1px solid #ccc; border-right-color:rgba(0,0,0,0.1);}
+.DFTable th:last-child {border-right:none !important;}
+.DFTable th.sorting {cursor:pointer; background: url(img/arrow.gif) no-repeat scroll 98% center transparent;}
+.DFTable th.sorting_asc {background: url(img/arrow_asc.gif) no-repeat scroll 98% center transparent;}
+.DFTable th.sorting_desc {background: url(img/arrow_desc.gif) no-repeat scroll 98% center transparent;}
+.DFTable td {padding:5px 8px; font-size:11px; background:#fff; border:solid #e3e3e3; border-width:1px 1px 0 0;}
+.DFTable td:last-child {border-right:none !important;}
+.DFTable td small {display:block; float:left; margin:0 5px 0 0; color:#505050 !important; font-weight:bold; display:block; font-size:12px; background:#fff url(img/thead_bg.png) repeat-x 0 1px; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))); background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)); text-shadow:0 1px #fff; padding:2px 4px; border:1px solid #b6c0c2; border-radius:3px; -webkit-border-radius:3px; text-decoration:none; text-align:center;}
+.DFTable tr.odd td {background:#fff;}
+.DFTable tbody tr:last-child td:last-child {border-bottom-right-radius:4px; -webkit-border-bottom-right-radius: 4px;}
+.DFTable tbody tr:last-child td:first-child {border-bottom-left-radius:4px; -webkit-border-bottom-left-radius: 4px;}
+.DFTable tbody tr.even td {background-color:#F6F6F6}
+.DFTable tbody tr:hover td {background-color:#FFF7D1}
+.DFTable tfoot th {border-bottom:0; border-top:1px solid #BBB; background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))) !important; background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)) !important;}
+.DFTable .CheckAll {position:relative; top:2px;}
+
+.abtn {position:relative; top:-5px;}
+.abtn {height:14px; padding:3px 5px; color:#333; display:inline-block; background:url(img/bg_button.png) !important; border-width:1px !important; border-style:solid !important; border-color:#999 #999 #888 !important; -moz-box-shadow:0 1px 0 rgba(0,0,0,0.1); -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.1); box-shadow:0 1px 0 rgba(0,0,0,0.1); font-size:11px;}
+.abtn:hover {text-decoration:none !important;}
+.abtn.btn-action {cursor:default; opacity:0.3; filter:alpha(opacity=30);}
+.abtn span {display:block; padding:0 0 0 20px; font-size:11px !important; font-weight:normal !important; color:#333 !important; font-family:	'Helvetica Neue',Helvetica,'Trebuchet MS',Arial,sans-serif;}
+.abtn.add span {background:url(img/add.png) no-repeat left center;}
+.abtn.edit span {background:url(img/edit.png) no-repeat left center;}
+.abtn.delete span {background:url(img/trash.png) no-repeat left center;}
+.abtn.clone span {background:url(img/pages.png) no-repeat left center;}
+
+.hidden {display:none}
+
+.tbuttons .redactor_separator {
+border-left: 2px solid #D7D7D7 !important;
+border-right: 2px solid #EEEEEE !important;
+}

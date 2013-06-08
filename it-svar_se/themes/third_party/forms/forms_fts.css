@@ -1,0 +1,52 @@
+.Forms {}
+.Forms .cfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.Forms .cfix {display:inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .Forms .cfix { height:1%; }
+.Forms .cfix {display:block; }
+/* end clearfix */
+
+/* TABS: jQuery UI Reset! */
+.Forms .Tabs {padding:0; margin:0; background:none; border:0; border-radius:0;}
+.Forms .Tabs li {background:none; padding:0; margin:0; border:0; border-radius:0;}
+.Forms .Tabs li a {background:none; padding:0; margin:0; border:0; border-radius:0;}
+.Forms .ui-tabs-panel {padding:10px 5px;}
+
+/* TABS: Normal Style */
+.Forms .Tabs {border-bottom:1px solid #B8B8B8;}
+.Forms .Tabs li {margin-left:5px; margin-bottom: -1px; height:22px; background:url(img/tab_inactive_bg.gif) repeat-x; border:1px solid #B8B8B8; border-top-left-radius:2px; border-top-right-radius:2px; line-height:22px;}
+.Forms .Tabs li a {color:#646464; padding:0 5px; font-size:11px; font-weight:bold; float:left; text-decoration:none; outline:none;}
+.Forms .Tabs li.ui-tabs-selected {border-bottom:none;}
+.Forms .Tabs li.ui-tabs-selected a {color:#B22447;}
+.Forms .TabsHolder {background:#FFFFFF; border-bottom:1px solid #B8B8B8; border-left:1px solid #B8B8B8; border-right:1px solid #B8B8B8;}
+
+/* FORM BUILDER */
+#FormBuilder .block {margin:0 0 10px;}
+#FormBuilder h6 {padding:0 10px; font-size:14px; background:url(img/tab_inactive_bg.gif) repeat-x; border:1px solid #B8B8B8; border-top-left-radius:2px; border-top-right-radius:2px; line-height:22px;}
+#FormBuilder .fieldlist {width:100%;}
+#FormBuilder .fieldlist th {font-size:12px; color:#505050 !important; background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; text-shadow:0 1px #fff; padding:5px 10px 6px 10px !important; line-height:13px; border-bottom:1px solid #B8B8B8 !important; border-right:1px solid #B8B8B8 !important; border-left:1px solid #B8B8B8 !important;}
+#FormBuilder .fieldlist td {padding:7px 10px; background:#fff; border:1px solid #e3e3e3; opacity:0.3}
+#FormBuilder .fieldlist .checked td {opacity:1}
+
+#FormBuilder .fsettings {display:none; margin:10px 0 0;}
+#FormBuilder .fsettings .stable {width:100%;}
+#FormBuilder .fsettings .stable th {font-size:12px; color:#505050 !important; background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; text-shadow:0 1px #fff; padding:5px 10px 6px 10px !important; line-height:13px; border:1px solid #B8B8B8 !important;}
+#FormBuilder .fsettings .stable td {padding:7px 10px; background:#fff; border:1px solid #e3e3e3; opacity:1}
+
+
+
+.Forms a.multiSelect {display:block; float:left; margin:0 5px 0 0; background: #FFF url(img/dropdown.gif) right center no-repeat; border: solid 1px #BBB; padding-right: 20px; position: relative; cursor: default; text-decoration: none; color: black; display: -moz-inline-stack; display: inline-block; vertical-align: top;}
+.Forms a.multiSelect:link, a.multiSelect:visited, a.multiSelect:hover, a.multiSelect:active {color: black; text-decoration: none;}
+.Forms a.multiSelect span {margin: 1px 0px 1px 3px; overflow: hidden; display: -moz-inline-stack; display: inline-block; white-space: nowrap;}
+.Forms a.multiSelect.hover {background-image: url(img/dropdown_hover.gif);}
+.Forms a.multiSelect.active, a.multiSelect.focus {border: inset 1px #000;}
+.Forms a.multiSelect.active {background-image: url(img/dropdown_active.gif);}
+.Forms .multiSelectOptions {margin-top: -1px; overflow-y: auto; overflow-x: hidden; border: solid 1px #B2B2B2; background: #FFF;}
+.Forms .multiSelectOptions LABEL {padding:4px; display: block; white-space: nowrap;}
+.Forms .multiSelectOptions LABEL.optGroup {font-weight: bold;}
+.Forms .multiSelectOptions .optGroupContainer LABEL {padding-left: 10px;}
+.Forms .multiSelectOptions.optGroupHasCheckboxes .optGroupContainer LABEL {padding-left: 18px;}
+.Forms .multiSelectOptions input {vertical-align: middle; margin-right:5px;}
+.Forms .multiSelectOptions LABEL.checked {background-color: #dce5f8;}
+.Forms .multiSelectOptions LABEL.selectAll {border-bottom: dotted 1px #CCC;}
+.Forms .multiSelectOptions LABEL.hover {background-color: #3399ff; color:white;}

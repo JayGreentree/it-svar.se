@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+
+{embed="embeds/html_header" my_page_title="Artiklar"}
+
+<body>
+
+<div id="home" class="active"></div>
+
+{lv_snippets_topnav}
+{lv_snippets_mainnav}
+{lv_modals_contact}
+{lv_modals_login}
+{lv_snippets_facebook_ini}
+
+{exp:ce_cache:it}
+<div class="container white">
+	<div class="row">
+		<div class="span12">
+		{exp:tagger:entries_quick unitag="{segment_3}"}
+			<div class="page-header">
+				<h1 style="padding-left:10px;">Taggarkiv fรถr:&nbsp;{exp:tagger:tagname unitag="{segment_3}"}</h1>
+			</div>
+			{exp:channel:entries entry_id="{tagger:entry_ids}" limit="2" channel="articles" dynamic="off" paginate="bottom"}
+				<h2>
+					<span style="float:right; padding-right:10px; color:#0088cc;">{entry_date format='%Y-%m-%d'}</span>
+					<a style="padding-left:10px;" href='{url_title_path='articles/post'}'>{title}</a>
+				</h2>
+				<div class="padded rounded_top clearfix" style="padding-top:6px;">
+					<div class="well pull-right" style="padding:5px; margin-left:10px;">
+						{if avatar}
+							<img src="{avatar_url}" width="50px" height="50px" alt="{author}">
+						{/if}
+					</div>
+					{article_entry}
+				</div>
+				<div class="padded rounded_bottom clearfix" style="margin-bottom:18px;">
+					<span style="float:left; margin-right:27px; margin-left:4px;"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W5HGL9R9JQAC2" target="_blank"><img src="{lv_assets_siteurl}/images/site_images/donate.png"></a></span>
+					<span style="float:left; margin-left:4px;"><g:plusone size="medium" href="{url_title_path='articles/post'}"></g:plusone></span>
+					<span style="float:left;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="{url_title_path='articles/post'}" data-text="IT-FAQ.SE | {title} " data-via="patrickhvid" data-lang="sv" data-count="horizontal"></a></span>
+					<span style="float:left;"><fb:like href="{url_title_path='articles/post'}" send="false" width="100" layout="button_count" show_faces="false" font="arial"/></span>
+					<span class="pull-right" style="text-align:right;">
+					{exp:gwcode_categories entry_id="{entry_id}" style="linear"}
+						<a class="btn btn-mini btn-success" style="font-size:0.9em; font-weight:normal; margin:0 0 5px 0;" href="/articles/category/{complete_path}">{cat_name}</a>
+					{/exp:gwcode_categories}<br>
+					{exp:tagger:tags entry_id="{entry_id}" prefix="entry_tag" backspace="6"}
+						<a class="btn btn-mini btn-info" style="font-size:0.9em; font-weight:normal; margin:0 0 5px 0;" href="{site_url}/articles/tags/{entry_tag:unitag}" title="{entry_tag:tag_name}">{entry_tag:tag_name}</a>
+					{/exp:tagger:tags}<br/>
+					</span>
+				</div>
+				{paginate}
+				<div class="pagination">
+					<center>
+						{pagination_links}
+						<ul>
+							{first_page}
+							<li><a href="{pagination_url}">&#171;</a></li>
+							{/first_page}
+							{previous_page}
+							<li><a href="{pagination_url}">&#60;</a></li>
+							{/previous_page}
+							{page}
+							<li class="{if current_page}active{/if}"><a href="{pagination_url}">{pagination_page_number}</a></li>
+							{/page}
+							{next_page}
+							<li><a href="{pagination_url}">&#62;</a></li>
+							{/next_page}
+							{last_page}
+							<li><a href="{pagination_url}">&#187;</a></li>
+							{/last_page}
+						</ul>
+						{/pagination_links}
+					</center>
+				</div>
+				{/paginate}
+			{/exp:channel:entries}
+		{/exp:tagger:entries_quick} 
+		</div>
+	</div>
+</div>
+<div class="container white">
+	<div class="row">
+		<div class="span12">
+			<div class="padded rounded_all clearfix" style="margin-top:16px;">
+				<h2>Taggmoln:</h2>
+				<center>
+					{exp:tagger:cloud limit="100" backspace="1" channel="articles" sort="asc" prefix="tags"} 
+						<a class="btn btn-mini btn-info" href="{site_url}/articles/tags/{tags:unitag}/" title="{tags:tag_name}">{tags:tag_name}</a>   
+					{/exp:tagger:cloud} 
+				</center>
+			</div> 
+		</div>
+	</div>
+{lv_snippets_footer}
+</div>
+
+{/exp:ce_cache:it}
+
+</body>
+</html>	

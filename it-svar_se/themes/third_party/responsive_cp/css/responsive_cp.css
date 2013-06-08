@@ -1,0 +1,286 @@
+/* Responsiveness */
+body {
+	min-width: 0;
+}
+
+
+/* Branding */
+#branding {
+	background-position: 0 -5px;
+	margin-bottom: 0;
+}
+
+
+/* Notice */
+#notice_flag {
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-left-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+}
+
+
+/* Navigation */
+#navigationTabs li a.first_level, 
+#navigationTabs li a.first_level:link, 
+#navigationTabs li a.first_level:visited {
+	background: #2E3C45;
+	border-radius: 3px;
+	letter-spacing: normal;
+	font-size: 13px;
+	padding: 5px 8px 5px 8px;
+	margin: 2px 5px 12px 4px;
+}
+
+#navigationTabs li.home a.first_level,
+#navigationTabs li #addQuickTab, #navigationTabs li #addQuickTab:link {
+	background: none;
+	padding: 5px 0;
+	margin: 2px 8px 12px 6px;
+}
+
+#navigationTabs li.msm_sites {
+	margin-top: 1px;
+}
+#navigationTabs li.msm_sites a.first_level {		
+	background: none;
+	color: #ECF1F4;
+	padding: 5px 0;
+}
+
+#navigationTabs li ul {
+	background: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 5px 0;
+}
+
+#navigationTabs li ul a {
+	padding: 5px 15px;
+}
+
+#navigationTabs li ul ul {
+	margin: -28px 0 0 169px;
+	border: 1px solid #D0D7DF !important;
+}
+
+
+#navigationTabs li li.parent:focus > a, 
+#navigationTabs li li.parent.active > a {
+    z-index: 1;
+}
+
+
+/* Breadcrumbs */
+#breadCrumb {
+	font-size: 11px;
+	border-bottom: 1px solid #ddd;
+}
+
+#breadCrumb li {
+	line-height: 13px;
+	background: url(../images/breadcrumb_separator.png) no-repeat center right;
+	padding-right: 18px;
+	margin: 8px 7px 8px 0;
+}
+
+#breadCrumb li:first-child {
+	font-weight: bold;
+}
+
+#breadCrumb li.last {
+	font-weight: normal;
+}
+
+
+/* Rounded body sections */
+#accessoryTabs li, .heading {
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.tableFooter, div.pageContents, #mainContent #publishForm {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+
+/* Headings */
+.heading h2 {
+	background: none;
+	font-size: 18px;
+}
+
+#mainContent .contentMenu h2 {
+	font-size: 20px;
+}
+
+#template_details {
+	background: #3E5360;
+}
+
+
+/* Tables */
+table.mainTable th {
+	background: #3E4C54;
+	border-left: 1px solid #D0D7DF;
+}
+
+table.mainTable th:last-child {
+	border-right: 1px solid #D0D7DF !important;
+}
+
+table.mainTable th.headerSortUp, table.mainTable th.headerSortDown {
+	background: #D91350;
+	border-left: 1px solid #D0D7DF;
+}
+
+
+/* Sidebar */
+#sidebarContent {
+	font-size: 90%;
+}
+
+#sideBar h4 {
+	font-size: 16px;
+}
+
+#activeUser {
+	background-image: none;
+}
+
+
+/* Buttons */
+.button a, .cp_button a, #search form, div.contentMenu, #mainContent .formArea, #navigationTabs .first_level:not(.addTab) {
+	border-radius: 3px;
+}
+
+.newTemplate {
+	border-radius: 3px;
+}
+
+#mainContent .formArea .formHeading .newTemplate {
+	font-size: 11px;
+}
+
+.pageContents span.button .submit, 
+span.button .submit {
+	color: #777;
+}
+
+.less_important_bttn, 
+.rightNav .submit {
+	background: #ECF1F4;
+	border: 1px solid #ddd;
+}
+
+.less_important_bttn:hover,
+.rightNav a.submit:hover {
+    background: #ECF1F4;
+    color: #E7174B;
+}
+
+
+/* Tabs */
+#mainContent .tab_menu li {
+	border-left: 1px solid #505F66;
+	margin-left: 2px;
+}
+
+
+/* Accessories */
+#accessoryTabs li {
+	background: #ABB7C3 url(../../../cp_themes/default/images/backgrounds_sprite.png) repeat-x 0 -330px;
+	font-size: 16px;
+}
+
+#accessoryTabs li a:link, #accessoryTabs li a:visited {
+	padding-right: 0;
+}
+
+#accessoryTabs li a span.accessoryHandle {
+	display: none;
+}
+
+
+/* ------------------------- Media Queries ------------------------- */
+
+
+/* Tablet (portrait) and smaller */
+@media screen and (max-width: 768px) 
+{
+	#mainMenu {
+		padding-bottom: 4px;
+	}
+	
+	#navigationTabs li.home {
+		margin-left: -22px;
+	}
+	
+	#navigationTabs li.home a.first_level {
+		margin-right: 4px;
+	}
+	
+	#navigationTabs li a.first_level {
+		margin-bottom: 6px !important;
+	}
+	
+	#navigationTabs > .msm_sites {
+		margin-right: 8px;
+	}	
+	
+	#mainContent .contentMenu {
+		width: 93.4%;
+	}
+	
+	.contentMenu ul.homeBlocks {
+		min-height: 0;
+		margin-bottom: 15px;
+	}	
+}
+
+
+/* Phone (landscape) and smaller */
+@media screen and (max-width: 480px) 
+{
+	#navigationTabs li.msm_sites {		
+		display: none;
+	}
+	
+	#navigationTabs li.msm_sites.parent {		
+		display: block;
+	}
+	
+	#sideBar {
+		width: auto;		
+	}
+
+	#activeUser .userName {
+		margin-left: 10px;
+		margin-right: 20px;
+	}
+	
+	#activeUser .logOutButton {
+		padding-right: 8px;
+	}
+		
+	#sidebarControl, #sidebarContent {
+		display: none !important;
+	}
+	
+	#mainContent {		
+		width: 100% !important;
+	}
+}
+
+
+/* Phone (portrait) and smaller */
+@media screen and (max-width: 320px) 
+{	
+	#activeUser .userName {
+		margin-right: 10px;
+	}
+}

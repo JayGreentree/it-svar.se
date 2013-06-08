@@ -1,0 +1,70 @@
+{embed="%prefix%inc/index" page_title="Registration"}
+</head>
+<body id="home">
+{embed="%prefix%inc/header"}
+
+		<div id="maincolumn">
+		
+			<h2>Facebook Connect</h2>
+			
+			<h3>Registration</h3>
+			
+			<p></p>
+
+			<div id="leftcolumn">
+
+				{exp:fbc:registration
+					return_on_success="%prefix%main/status/registered"
+					width="600"
+					border_color="#ffffff"
+				}
+
+				{if logged_in}
+					<p>You are currently logged into ExpressionEngine on this site. You must be logged out of EE to view the Registration form</p>
+				{/if}
+
+				<hr />
+
+				{exp:fbc:activity
+					width="600"
+					height="200"
+					header="true"
+					font="arial"
+					recommendations="true"
+					border_color="#ffffff"
+				}
+ 
+			</div>
+
+			<div id="rightcolumn">
+
+{embed="%prefix%inc/side_column"}
+
+				<div id="aboutcolumn">
+		
+					<h3>About This Page</h3>
+		
+					<p>The "Register" page uses the Facebook Registration plugin to display a simple registration form. Any users that are not logged into EE will be able to see the form. Once registration is complete, an EE account will be created and synced to the users' Facebook account.</p>
+
+					<p>It makes use of the following tags:</p>
+
+					<ul>
+						<li><a href="http://www.solspace.com/docs/detail/fbc_fb_registration/">FBC:Registration</a> to display the Facebook Registration form.</li>
+						<li><a href="http://www.solspace.com/docs/detail/fbc_fb_activity_feed/">FBC:Activity_Feed</a> to display a list of all recent Facebook activity for this site amongst all users.</li>
+					</ul>
+
+					<p>This specific column (on the right), uses the following tags:</p>
+
+					<ul>
+						<li><a href="http://www.solspace.com/docs/detail/fbc_login/">FBC:Login</a> to display a Facebook Login and Logout button, allowing logged in EE users to sync their accounts with Facebook, and allowing logged out users to easily create an account on your site.</li>
+						<li><a href="http://www.solspace.com/docs/detail/fbc_fb_like_button/">FBC:Like</a> to display a Facebook "Like" and "Share" button on your site.</li>
+						<li><a href="http://www.solspace.com/docs/detail/fbc_login_status/">FBC:Login_Status</a> to display some login information about the currently logged in user. This is also handy for troubleshooting while using FBC.</li>
+					</ul>
+
+				</div>
+
+			</div>
+	
+		</div>
+		
+{embed="%prefix%inc/footer"}

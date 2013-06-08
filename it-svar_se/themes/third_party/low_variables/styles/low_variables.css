@@ -1,0 +1,717 @@
+/**
+ * Low Variables CSS file
+ *
+ * @package        low_variables
+ * @author         Lodewijk Schutte <hi@gotolow.com>
+ * @link           http://gotolow.com/addons/low-variables
+ * @copyright      Copyright (c) 2009-2013, Low
+ */
+
+/* Low Variables menu for EE1
+-------------------------------------------------*/
+#low-variables-menu {
+	width:100%;
+	margin-bottom:1.5em;
+	table-layout:fixed;
+}
+
+#low-variables-menu td {
+	padding:0;
+}
+
+#low-variables-menu td.last {
+	border-right:none;
+}
+
+#low-variables-menu td a {
+	display:block;
+	text-align:center;
+	padding:6px 0 5px
+}
+
+/* Account for huge content in EE2
+-------------------------------------------------*/
+
+#mainContent .pageContents {
+	overflow:auto !important;
+	position:relative;
+}
+
+/* Low Variables Alert box for EE2
+-------------------------------------------------*/
+div.low-alertbox {
+	background:#fee;
+	border:1px solid #c99;
+	color:#966;
+	padding:14px;
+	margin-bottom:14px;
+
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+
+	-webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.1);
+	box-shadow:2px 2px 3px rgba(0,0,0,0.1);
+}
+
+div.low-alertbox ul {
+	list-style:square outside;
+	margin-left:14px;
+}
+
+tr.low-var-alert td {
+	background:#fee !important;
+}
+
+div.low-var-alert {
+	color:#c66;
+	margin-top:5px;
+}
+
+div.low-cell-header {
+	padding:7px 10px;
+	margin:-7px -10px 7px;
+	border-bottom:1px dashed #ccc;
+}
+
+/* Low Variables list of groups on home screen
+-------------------------------------------------*/
+#low-grouplist {
+	width:201px;
+	float:left;
+}
+
+#low-grouplist table.mainTable td,
+#low-grouplist .profileMenuInner {
+	padding:0;
+}
+
+#low-grouplist ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#low-grouplist li {
+	overflow:hidden;
+	position:relative;
+}
+
+#low-grouplist.low-manager li {
+	padding:3px 36px 3px 22px;
+}
+
+#low-grouplist li:hover {
+	background-color:#fff;
+	background-color:rgba(255,255,255,0.75);
+}
+
+#low-grouplist li.active {
+	background-color:#fff;
+}
+
+#low-grouplist .low-grouplink {
+	display:block;
+	font-size:12px;
+	line-height:1.5;
+	padding:3px 10px;
+	text-decoration:none;
+}
+
+#low-grouplist li:not(.active) a.low-grouplink {
+	color:#666;
+}
+
+#low-grouplist li:not(.active):hover a.low-grouplink {
+	color:#000;
+}
+
+#low-grouplist small {
+	display:none;
+}
+
+#low-grouplist span.low-grouplink {
+	opacity:0.5;
+	cursor:default;
+}
+
+#low-grouplist.low-manager .low-grouplink {
+	width:142px;
+	padding:0;
+}
+
+#low-grouplist .low-handle {
+	position:absolute;
+	top:4px;
+	left:0;
+	width:22px;
+	height:16px;
+	background:url(../images/drag-handle.png) 50% 50% no-repeat;
+	cursor:move;
+	cursor:-moz-grab;
+	cursor:-webkit-grab;
+}
+#low-grouplist .low-delete {
+	position:absolute;
+	top:4px;
+	right:4px;
+	width:16px;
+	height:16px;
+	background:url(../images/delete-folder.png) 50% 5px no-repeat;
+	overflow:hidden;
+	text-indent:-9999em;
+	visibility:hidden;
+}
+#low-grouplist .low-delete:hover {
+	background-position:50% -15px;
+}
+#low-grouplist .low-edit {
+	position:absolute;
+	top:4px;
+	right:20px;
+	width:16px;
+	height:16px;
+	background:url(../images/edit-folder.png) 50% 5px no-repeat;
+	overflow:hidden;
+	text-indent:-9999em;
+	visibility:hidden;
+}
+#low-grouplist .low-edit:hover {
+	background-position:50% -15px;
+}
+
+#low-grouplist li:hover .low-delete,
+#low-grouplist li:hover .low-edit {
+	visibility:visible;
+}
+
+#low-grouplist li.ui-sortable-helper {
+	margin:2px 0 0 2px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+	box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+}
+
+#low-grouplist li.ui-sortable-helper .low-handle {
+	cursor:-webkit-grabbing;
+	cursor:-moz-grabbing;
+	cursor:grabbing;
+}
+
+#low-sortable-groups {
+	border-bottom:1px dashed #ddd;
+}
+
+/* Low Variables tables on home screen
+-------------------------------------------------*/
+#low-varlist {
+	margin-left:210px;
+}
+
+#low-varlist .low-vargroup {
+	width:100%;
+}
+
+#low-varlist .low-vargroup col.label {
+	width:200px;
+}
+
+#low-varlist .low-vargroup .low-group-notes {
+	line-height:1.5;
+	background:#ffe;
+	color:#666;
+}
+
+#low-varlist .low-vargroup .low-group-notes .box {
+	border-width:0 0 1px 0;
+	margin:0;
+}
+
+#low-varlist .edit-var {
+	float:right;
+	width:16px;
+	height:16px;
+	margin:-2px -4px 0 0;
+	overflow:hidden;
+	text-indent:-9999em;
+	background:url(../images/edit-folder.png) 50% 5px no-repeat;
+	display:none;
+}
+
+#low-varlist .edit-var:hover {
+	background-position:50% -15px;
+}
+
+#low-varlist td:hover .edit-var {
+	display:block;
+}
+
+#low-varlist .low-label-holder code {
+	display:none;
+	font-weight:bold;
+	font-family:'consolas', 'monaco', 'lucida console', sans-serif;
+}
+
+#low-varlist .low-label-holder.low-manager:hover .low-label {
+	display:none;
+}
+
+#low-varlist .low-label-holder.low-manager:hover code {
+	display:block;
+}
+
+#low-collapse {
+	font-size:12px;
+	text-decoration:none !important;
+	margin-right:5px;
+	letter-spacing:2px;
+}
+
+#low-grouplist #low-collapse {
+	float:right;
+	margin-right:0;
+}
+
+/* Low Variables input field size options
+-------------------------------------------------*/
+table input.large, table textarea {
+	width:99%;
+}
+
+table input.medium {
+	width:260px;
+}
+
+table input.small {
+	width:100px;
+}
+
+table input.x-small {
+	width:30px;
+}
+
+/* Low Variables Textarea Code Format
+-------------------------------------------------*/
+.low_code_format, .low_code_format:focus {
+	font-family:'consolas','andale mono','monaco',monospace;
+	background:#333;
+	color:#aaa;
+	padding:3px;
+	border:0;
+	border-radius:0;
+}
+
+.low_code_format:focus {
+	background:#222;
+	color:#ccc;
+}
+
+/* Low Variables form fields
+-------------------------------------------------*/
+label.low-radio {
+	margin-right:15px;
+	cursor:pointer;
+	font-weight:normal;
+}
+
+label.low-checkbox {
+	display:block;
+	cursor:pointer;
+	font-weight:normal;
+}
+
+label.low-radio input,
+label.low-checkbox input {
+	margin-right:5px;
+}
+
+/* Drag 'n Drop lists
+-------------------------------------------------*/
+.low-drag-lists {
+	overflow:hidden;
+}
+
+.low-drag-lists ul {
+	background:#fff;
+	list-style:none;
+	padding:5px 0;
+	margin:0;
+	height:150px;
+	overflow:auto;
+	border:1px solid #ccc;
+	width:49%;
+}
+
+.low-drag-lists.images ul {
+	height:250px;
+	white-space:nowrap;
+}
+
+.low-drag-lists ul {
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+
+.low-drag-lists ul.low-off {
+	float:left;
+	color:#999;
+}
+
+.low-drag-lists ul.low-on {
+	float:right;
+}
+
+.low-drag-lists li {
+	overflow:hidden;
+	padding:4px 7px;
+	margin:0 5px;
+	cursor:move;
+	cursor:-webkit-grab;
+	cursor:-moz-grab;
+	cursor:grab;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px
+}
+
+.low-drag-lists ul li:hover {
+	background:#eee;
+	color:#000
+}
+
+.low-drag-lists li.ui-sortable-helper {
+	background:#eee;
+	color:#000;
+	cursor:-webkit-grabbing;
+	cursor:-moz-grabbing;
+	cursor:grabbing;
+}
+
+.low-drag-lists li.ui-sortable-helper {
+	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+	box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+}
+
+.low-drag-lists .low-img {
+	display:inline-block;
+	width:73px;
+	min-height:1em;
+	vertical-align:middle;
+	margin:0 3px;
+}
+
+.low-drag-lists .low-img img {
+	display:block;
+	margin:0 auto;
+	overflow:hidden;
+
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+
+.low-drag-lists .low-off img {
+	opacity:0.5;
+}
+
+.low-drag-lists li:hover .low-img img {
+	opacity:1;
+}
+
+/* Upload form
+-------------------------------------------------*/
+.low-new-file {
+	line-height:29px;
+	border-top:1px dashed #ddd;
+	margin:7px -10px -7px;
+	padding:0 10px;
+}
+
+.low-new-file input {
+	margin-left:10px;
+}
+
+.low-new-file span {
+	margin-left:10px;
+	font-style:italic;
+	text-shadow:1px 1px 1px #fff;
+	display:none;
+}
+
+.low-new-file.has-file span {
+	display:inline;
+}
+
+/* Variable type: Low Table
+-------------------------------------------------*/
+#low-varlist .low-table-cell {
+	padding:0;
+}
+
+#low-varlist .low-table {
+	margin:0 !important;
+	border:none;
+	table-layout:fixed !important;
+}
+
+/* WTF, webkit?! */
+#low-varlist .low-table-cell .low-table {
+	width:100%;
+}
+
+#low-varlist .low-table thead {
+	background:none;
+}
+
+#low-varlist .low-table th {
+	background:none;
+	color:#666;
+	color:rgba(0,0,0,0.5);
+	text-shadow:1px 1px 1px #fff;
+	padding:7px 10px;
+	border:none;
+	cursor:default;
+	text-align:left;
+}
+
+#low-varlist .low-table tbody td {
+	padding:7px 8px;
+	background:#fff;
+	border:1px dashed #eee;
+	border-width:1px 0 0 1px;
+	overflow:hidden;
+}
+
+#low-varlist .low-table tr:first-child td {
+	border-top:none !important;
+}
+
+#low-varlist .low-table th:first-child,
+#low-varlist .low-table td:first-child {
+	border-left:none !important;
+}
+
+#low-varlist .low-table th:last-child,
+#low-varlist .low-table td:last-child {
+	border-right:none !important;
+}
+
+#low-varlist .low-table input {
+	display:block;
+	background:none;
+	border-width:0;
+	padding:0;
+	margin:0;
+	width:100%;
+	font-size:12px;
+	line-height:auto;
+	outline:none;
+}
+
+#low-varlist .low-table tbody td.low-focus {
+	background:#ffe;
+}
+
+#low-varlist .low-table tbody td.low-focus input {
+	color:#000;
+}
+
+#low-varlist .low-table tfoot td {
+	border:none;
+	padding:7px 10px;
+}
+
+/* Add something link
+-------------------------------------------------*/
+
+.low-add {
+	text-decoration:none !important;
+	color:#bbb !important;
+	color:rgba(0,0,0,0.4) !important;
+}
+
+.low-add:hover {
+	color:#888 !important;
+	color:rgba(0,0,0,0.6) !important;
+}
+
+.low-add b {
+	font:bold 16px/1 arial;
+	margin-right:2px;
+	position:relative;
+	top:2px;
+}
+
+/*
+.low-add b {
+	display:inline-block;
+	width:14px;
+	height:14px;
+	margin-right:3px;
+	border:1px solid #ccc;
+	border:1px solid rgba(0,0,0,0.2);
+
+	text-align:center;
+	font:bold 14px/1 arial;
+	color:#666;
+	color:rgba(0,0,0,0.4);
+
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius:8px;
+
+	background:#fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background-image: -webkit-linear-gradient(top, #fff, #eee);
+    background-image:    -moz-linear-gradient(top, #fff, #eee);
+    background-image:     -ms-linear-gradient(top, #fff, #eee);
+    background-image:      -o-linear-gradient(top, #fff, #eee);
+    background-image:         linear-gradient(top, #fff, #eee);
+}
+
+.low-add:hover b {
+	color:#888;
+	color:rgba(0,0,0,0.5);
+
+	-webkit-box-shadow:0 0 2px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 2px rgba(0,0,0,0.2);
+	box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+*/
+
+/* Manage variables: complete list of variables
+-------------------------------------------------*/
+
+#low-list-vars tr.selected td {
+	background-color:#ffe;
+}
+
+#low-list-vars .onoff {
+	display:block;
+	width:16px;
+	height:16px;
+	margin:0 auto;
+	overflow:hidden;
+	text-indent:-9999em;
+	background:transparent url(../images/off.png) 50% 50% no-repeat;
+	border:none;
+}
+
+#low-list-vars .onoff.on {
+	background-image:url(../images/on.png);
+}
+
+
+/* Manage variables: edit group, change var sort order
+-------------------------------------------------*/
+
+#low-variables-list {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+#low-variables-list li {
+	padding:4px 0 4px 22px ;
+	background:url(../images/drag-handle.png) 6px 50% no-repeat;
+	cursor:move;
+	cursor:-webkit-grab;
+	cursor:-moz-grab;
+	cursor:grab;
+}
+
+#low-variables-list li.ui-sortable-helper {
+	margin:2px 0 0 2px;
+	cursor:-webkit-grabbing;
+	cursor:-moz-grabbing;
+	cursor:grabbing;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+	box-shadow:1px 1px 2px rgba(0,0,0,0.15);
+}
+
+#low-variables-list li:hover {
+	background-color:#fff;
+	color:#000
+}
+
+/* Manage variables: edit variable
+-------------------------------------------------*/
+#low-variable-form table {
+	width:100%
+}
+
+#low-variable-form col.key {
+	width:30%
+}
+
+#low-variable-form col.val {
+	width:70%
+}
+
+/* Manage variables: label and notes
+-------------------------------------------------*/
+#mainContent table label, #contentNB table label,
+#mainContent table strong, #contentNB table strong {
+	margin-bottom:0;
+}
+table thead th {
+	text-align:left;
+}
+table .low-label {
+	display:block;
+	font-weight:bold;
+	color:#666;
+	font-size:11px;
+}
+table a.low-label {
+	margin-top:4px;
+	font-weight:bold;
+	color:#666;
+	font-size:11px;
+}
+div.low-var-notes {
+	margin-top:4px;
+	font-size:11px;
+	line-height:1.364;
+}
+#mainContent table .low-label {
+	font-size:12px;
+}
+table a.clone {
+	display:block;
+	height:16px;
+	background:url(../images/copy.png) 50% 50% no-repeat;
+	text-indent:-9999em;
+	overflow:hidden;
+}
+h2.low-heading {
+	padding:9px 12px;
+	font-size:12px;
+	color:#fff;
+}
+
+/* Manage variables: delete confirmation for EE2
+-------------------------------------------------*/
+#low-variables-delete p {
+	font-weight:bold
+}
+#low-variables-delete p.important {
+	margin-bottom:14px;
+	color:#c00;
+}
+#low-variables-delete ul {
+	margin:14px;
+}
+#low-variables-delete a.cancel {
+	margin-left:14px;
+}

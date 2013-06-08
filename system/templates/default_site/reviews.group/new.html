@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+
+{embed="embeds/html_header" my_page_title="Frågor & Svar"}
+
+<body>
+
+<div id="home" class="active"></div>
+
+{lv_snippets_topnav}
+{lv_snippets_mainnav}
+{lv_modals_contact}
+{lv_modals_login}
+{lv_snippets_facebook_ini}
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			{if logged_in}
+			<div class="page-header">
+				<h1>Köphjälp - Ny Artikel</h1>
+			</div>
+			{exp:safecracker channel="reviews" include_jquery="no" rte_selector=".rtxe" return="site/thank_you"}
+				<fieldset>
+				<div class="control-group">
+					<label class="control-label" for="title">Titel:</label>
+					<div class="controls">
+						<input type="text" id="title" value="{title}" name="title" class="span12 input-xlarge focused""/>
+					</div>
+				</div>
+				<br/>
+				<label for="field:review_entry">{instructions:review_entry}</label>
+					<p>{field:review_entry}</p>
+				<br/>
+				<hr/>
+				<input type="submit" name="submit" class=" pull-right btn btn-primary" value="Skicka" />
+			</fieldset>
+			{/exp:safecracker}
+			{if:else}
+			<div class="hero-unit hidden-phone">
+				<h1>Någonting gick galet!</h1>
+				<hr/>
+				<p>Är du inloggad på IT-reviews så har någonting gått galet, kontakta oss via formuläret högst upp på sidan</p>
+				<p>Är du inte inloggad kan du göra detta via inloggningsmenyn högst upp på sidan</p>
+				<p>Har du ännu inget konto, så skapas ett sådant automatiskt när du loggar in via facebook.</p>
+				<p>Med vänliga hälsningar: <i>Gänget på IT-reviews.SE</i></p>
+			</div>
+			{/if}
+		</div>
+	</div>
+{lv_snippets_footer}
+</div>
+
+</body>
+</html>	

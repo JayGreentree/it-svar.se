@@ -1,0 +1,40 @@
+				<div id="sidecolumn">
+
+				{if logged_in_group_id == "1"}<div class="codepack_error">You are logged in as Super Admin, so you cannot login through Facebook.</div>{/if}
+
+				{exp:fbc:login
+					permissions="email|publish_stream|read_stream"
+					return_when_logged_in="%prefix%main/status/logged_in"
+					return_when_logged_out="%prefix%main/status/logged_out"
+					return_for_passive_register="%prefix%main/status/registered"
+					return_for_register="%prefix%main/register"
+					return_on_failure="%prefix%main/status/fail"
+				}
+					{if fbc_logged_out == "y"}{fbc_login_button}{/if}
+					{if fbc_logged_in == "y"}Logged in through Facebook (<a href="{path='logout'}">Log Out</a>){/if}
+				{/exp:fbc:login}
+
+				<hr />
+
+				{exp:fbc:like
+					href="{site_url}"
+					send="true"
+					layout="standard"
+					width="250"
+					show_faces="false"
+					action="like"
+					colorscheme="light"
+					font="arial"
+				}
+
+				<hr />
+
+				<h5>Login Status (troubleshooting)</h5>
+				{exp:fbc:login_status}
+					<p>Logged into EE? <b>{if fbc_logged_into_ee == "y"}Yes{if:else}No{/if}</b><br />
+					Logged into Facebook? <b>{if fbc_logged_into_facebook == "y"}Yes{if:else}No{/if}</b><br />
+					Logged into Facebook <i>and</i> EE? <b>{if fbc_logged_into_ee == "y" AND fbc_logged_into_facebook == "y"}Yes{if:else}No{/if}</b><br />
+					Facebook and EE accounts synced? <b>{if fbc_logged_into_facebook_and_ee == "y"}Yes{if:else}No{/if}</b></p>
+				{/exp:fbc:login_status}
+
+				</div>

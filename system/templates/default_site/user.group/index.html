@@ -1,0 +1,33 @@
+{exp:fbc:prepare_page}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+
+{embed="embeds/html_header" my_page_title="Hem"}
+
+<body>
+
+		<div id="maincolumn">
+		
+			<h2>Facebook Connect</h2>
+			
+			<h3>Registration</h3>
+			
+			<p></p>
+
+			<div id="leftcolumn">
+
+				{exp:fbc:registration
+					return_on_success="fbc_main/status/registered"
+					width="600"
+					border_color="#ffffff"
+				}
+
+		</div>
+
+	
+		</div>
+		
+{exp:fbc:prepare_page}
+</body>

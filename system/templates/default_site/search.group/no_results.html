@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+
+{embed="embeds/html_header" my_page_title="Sök"}
+
+<body>
+
+<div id="home" class="active"></div>
+
+{lv_snippets_topnav}
+{lv_snippets_mainnav}
+{lv_modals_contact}
+{lv_modals_login}
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>Sökresultat</h1>
+			</div>
+			<h2 style="color:#0088cc;"> Hittade {exp:search:total_results} poster som innehåller ordet "{exp:search:keywords}"</h2> 
+			{exp:search:search_results}
+				<div class="padded rounded_top clearfix" style="margin-bottom:18px;">
+				<a href="{auto_path}">{title}</a></b>&nbsp;från&nbsp;<em>{channel}</em><br/>{excerpt}
+				</div>
+			{/exp:search:search_results}
+		</div>
+	</div>
+{lv_snippets_footer}
+</div>
+
+</body>
+</html>	

@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+
+{embed="embeds/html_header" my_page_title="K&ouml;phj&auml;lp"}
+
+<body>
+
+<div id="home" class="active"></div>
+{lv_snippets_start}
+
+<div class="container white">
+	<div class="row">
+		<div class="span12">
+			<div class="page-header">
+				{if segment_2 =="category"}
+					<h1 style="padding-left:10px;">K&ouml;phj&auml;lp om&nbsp;{last_segment_category_name}</h1>
+				{if:else}
+				<h1 style="padding-left:10px;">K&ouml;phj&auml;lp</h1>
+				{/if}
+			</div>
+			{exp:selected item="{segment_3}" replace="active"}
+			<ul class="nav nav-tabs">
+				<li class="{selected_empty}">
+					<a href="/reviews">Samtliga</a>
+				</li>
+				{exp:gwcode_categories channel="reviews" max_depth="2" style="linear"}
+					{if depth1_start}
+						<li class="dropdown {selected_{cat_url_title}}">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">{cat_name}<b class="caret"></b></a>
+					{/if}
+					{if depth2_start}
+						<ul class="dropdown-menu">
+					{/if}
+					{if depth == 2}
+						<li><a href="/reviews/category/{complete_path}">{cat_name}</a></li>
+					{/if}
+					{if depth2_end}
+						<li class="divider"></li>
+						<li><a href="/reviews/category/{parent_url_title}">Alla {parent_name}</a></li>
+						</ul>
+					{/if}
+					{if depth1_end}
+						</li>
+					{/if}
+				{/exp:gwcode_categories}
+				<li class="pull-right">
+				{if logged_in}
+					<a href="reviews/new">Skriv en egen Artikel</a>
+				{/if}
+				</li>
+			</ul>
+			{/exp:selected}
+		</div>
+	</div>
+	<div class="row">
+		<div class="span10">
+			{exp:channel:entries channel="reviews" disable="{lv_shortcut_disable_default}" orderby="date" sort="desc" limit="2" paginate="bottom" }
+				<h2>
+					<span style="float:right; padding-right:10px; color:#0088cc;">{entry_date format='%Y-%m-%d'}</span>
+					<a style="padding-left:10px;" href='{url_title_path='reviews/post'}'>{title}</a>
+				</h2>
+				<div class="padded rounded_top clearfix" style="margin-top:0px;">
+					<div class="well pull-right" style="padding:5px; margin-left:10px;">
+						{if avatar}
+							<img src="{avatar_url}" width="50px" height="50px" alt="{author}">
+						{/if}
+					</div>
+					{review_entry}
+				</div>
+				<div class="padded rounded_bottom clearfix" style="margin-bottom:18px;">
+					<span style="float:left; margin-right:27px; margin-left:4px;"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W5HGL9R9JQAC2" target="_blank"><img src="{lv_assets_siteurl}/images/site_images/donate.png"></a></span>
+					<span style="float:left; margin-left:4px;"><g:plusone size="medium" href="{url_title_path='reviews/post'}"></g:plusone></span>
+					<span style="float:left;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="{url_title_path='reviews/post'}" data-text="IT-FAQ.SE | {title} " data-via="patrickhvid" data-lang="sv" data-count="horizontal"></a></span>
+					<span style="float:left;"><fb:like href="{url_title_path='reviews/post'}" send="false" width="100" layout="button_count" show_faces="false" font="arial"/></span>
+					<span class="pull-right" style="text-align:right;">
+					{exp:gwcode_categories entry_id="{entry_id}" style="linear"}
+						<a class="btn btn-mini btn-success" style="font-size:0.9em; font-weight:normal; margin:0 0 5px 0;" href="/reviews/category/{complete_path}">{cat_name}</a>
+					{/exp:gwcode_categories}<br>
+					{exp:tagger:tags entry_id="{entry_id}" prefix="entry_tag" backspace="6"}
+						<a class="btn btn-mini btn-info" style="font-size:0.9em; font-weight:normal; margin:0 0 5px 0;" href="{site_url}/reviews/tags/{entry_tag:unitag}" title="{entry_tag:tag_name}">{entry_tag:tag_name}</a>
+					{/exp:tagger:tags}<br/>
+					</span>
+				</div>
+				{paginate}
+				<div class="pagination">
+					<center>
+					{pagination_links}
+						<ul>
+							{first_page}
+							<li><a href="{pagination_url}">&#171;</a></li>
+							{/first_page}
+							{previous_page}
+							<li><a href="{pagination_url}">&#60;</a></li>
+							{/previous_page}
+							{page}
+							<li class="{if current_page}active{/if}"><a href="{pagination_url}">{pagination_page_number}</a></li>
+							{/page}
+							{next_page}
+							<li><a href="{pagination_url}">&#62;</a></li>
+							{/next_page}
+							{last_page}
+							<li><a href="{pagination_url}">&#187;</a></li>
+							{/last_page}
+						</ul>
+					{/pagination_links}
+					</center>
+				</div>
+				{/paginate}
+			{/exp:channel:entries}
+		</div>
+		<div class="span2 hidden-phone ">
+			<div class="padded rounded_all pull-right" style="margin-bottom:10px; padding:3px;">
+				<SCRIPT type="text/javascript" LANGUAGE="javascript" src="http://www.qksz.net/1e-lkre"> </SCRIPT>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container white">
+	<div class="row">
+		<div class="span12">
+			<div class="padded rounded_all clearfix" style="margin-top:16px;">
+				<h2>Taggmoln:</h2>
+				<center>
+					{exp:tagger:cloud limit="100" backspace="1" channel="reviews" sort="asc" prefix="tags"} 
+						<a class="btn btn-mini btn-info" href="{site_url}/reviews/tags/{tags:unitag}/" title="{tags:tag_name}">{tags:tag_name}</a>   
+					{/exp:tagger:cloud} 
+				</center>
+			</div> 
+		</div>
+	</div>
+{lv_snippets_footer}
+</div>
+{lv_snippets_ad-banner}
+
+</body>
+</html>	

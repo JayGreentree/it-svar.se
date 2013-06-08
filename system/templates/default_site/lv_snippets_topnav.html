@@ -1,0 +1,51 @@
+{if lv_assets_development == 'yes'}
+<div class="alert alert-error">
+<center>
+{site_url}<h2>OBS - TESTMILJÖ!</h2>
+</center>
+</div>
+{/if}
+
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+		<ul class="nav nav-pills" style="font-size:8pt; margin:0px;">
+			<li class="dropdown">
+				<a class="dropdown-toggle" href="#" data-toggle="dropdown">{if logged_in}{screen_name}{/if}{if logged_out}Logga in{/if}
+				<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					{if logged_in}
+						<li>
+							<a href="{path='member/profile'}">Mitt konto</a>
+						</li>
+						<li>
+							<a href="{exp:freemember:logout_url}">Logga ut</a>
+						</li>
+					{/if}
+					{if logged_out}
+						<li>
+							<a href="#loginModal" data-toggle="modal">Logga in manuellt</a>
+						</li>
+						<li style="margin-left:18px">
+						{exp:fbc:login
+							permissions="email|name|first_name|last_name|read_stream"
+							return_when_logged_in=""
+							return_when_logged_out=""
+							return_for_passive_register=""
+							return_for_register=""
+							return_on_failure=""
+							login_button_label="Facebook Login"
+						}
+						{fbc_login_button}
+						{/exp:fbc:login}
+						</li>
+					{/if}	
+				</ul>
+			</li>
+			<li><a href="#contactModal" data-toggle="modal">Kontakta Oss</a></li>
+		</ul>
+		</div>
+	</div>
+</div>

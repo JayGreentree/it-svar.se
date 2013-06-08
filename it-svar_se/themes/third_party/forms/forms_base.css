@@ -1,0 +1,197 @@
+/* STANDARD FIELDS */
+.dform_container input.text {
+	outline-style: none;
+	font-family: inherit;
+	padding: 2px 0 2px 0;
+	letter-spacing: normal;
+}
+
+.dform_container textarea {
+	outline-style: none;
+	font-family: inherit;
+	letter-spacing: normal;
+	padding: 2px 0 2px 0;
+	resize: none
+}
+
+.dform_container select {
+	font-family: inherit;
+	padding: 3px 0 3px 0;
+	letter-spacing: normal
+}
+
+.dform_container label {
+	display:block;
+}
+
+.dform_element {margin:5px 0 10px;}
+
+
+/* FIELD LABEL */
+.dform_element .dform_label {
+	font-weight: bold;
+}
+
+.dftop_label .dform_label {
+	margin: 10px 0 4px 0;
+	display: -moz-inline-stack;
+	display: inline-block;
+	line-height: 1.3em;
+	clear: both
+}
+
+.dfbottom_label .dform_label {
+	margin:4px 0 10px 0;
+	display: -moz-inline-stack;
+	display: inline-block;
+	line-height: 1.3em;
+	clear: both
+}
+
+.dfleft_label .dform_label {
+    float: left;
+    margin: 2px 15px 0 0;
+    width: 29%;
+}
+
+.dfright_label .dform_label {
+	float: left;
+	margin: 0 15px 0 0;
+	width: 29%;
+	text-align: right
+}
+
+/* FIELD ERROR */
+.dform_element .dform_error {
+	font-weight:bold;
+	color:red;
+}
+
+/* INPUT CONTAINER */
+.dfleft_label div.dform_container, .dfright_label div.dform_container {
+    float: left;
+    width: 64%;
+}
+
+.dform_container label {font-weight:normal}
+
+/* INNER CONTRAINERS */
+.dform_container .dfinput_left,
+.dform_container .dfinput_right,
+.dform_container .dfinput_full {
+    display: block;
+    min-height: 43px;
+    overflow: hidden;
+	margin-bottom:10px;
+}
+
+.dform_container .dfinput_left {
+    float: left;
+    width: 50%;
+}
+
+.dfinput_left input.text,
+.dfinput_right input.text {
+    width: 60%;
+}
+
+.dform_container .dfinput_right {
+    float: right;
+    width: 49%;
+}
+
+
+/* DATE FIELD */
+.dfinput_dates .df_date_elem {width:70px; float:left;}
+.dfinput_dates .df_date_elem_extra {width:100px; float:left;}
+.dfinput_dates label {display:block;}
+.dfinput_dates input.text {width:90%;}
+.dfinput_dates select {width:90%;}
+
+/* TIMES FIELD */
+.dfinput_times .df_time_elem {width:70px; float:left;}
+.dfinput_times label {display:block;}
+.dfinput_times input.text {width:80%;}
+
+/* PHONE FIELD */
+.dfinput_phones .phone_cc {width:15%;}
+.dfinput_phones .phone_area {width:15%;}
+.dfinput_phones .phone_number {width:40%;}
+.dfinput_phones .phone_extension {width:12.5%;}
+.dfinput_phones input.text {width:90%;}
+
+/* NAME FIELD */
+.dfinput_names .name_prefix {width:15%;}
+.dfinput_names .name_first {width:30%;}
+.dfinput_names .name_last {width:30%;}
+.dfinput_names .name_suffix {width:15%;}
+.dfinput_names input.text {width:90%;}
+
+/* ADDRESS FIELD */
+.dform_address input.text {width:90%;}
+.dform_address .address_state input.text {width:80%;}
+.dform_address .address_country select {width:80%;}
+
+/* PRODUCTS FIELD */
+.dfinput_products .df_qty_elem {width:70px; float:left;}
+.dfinput_products .df_products_elem {width:150px; float:left;}
+.dfinput_products label {display:block;}
+.dfinput_products input.text {width:90%;}
+.dfinput_products select {width:90%;}
+
+/* RADIO/CHECKBOX */
+.dform_element .checkboxes,
+.dform_element .radios {list-style:none; padding:0}
+
+/* COLUMNS */
+.dfcolumns {}
+.dfcolumns .column {min-height:100px; float:left;}
+
+/* FORM CONFIRMATION MESSAGE */
+.dform_confirmation {background-color:#DFF0D8; border:1px solid #D6E9C6; color:#468847; border-radius:4px 4px 4px 4px; margin-bottom:18px; padding:8px 35px 8px 14px;}
+
+/* CART */
+.dform_container .cart_qty_small {text-align:center; width:30px;}
+
+/* CREDIT CARD */
+.cc_number {position:relative;}
+.cc_number input {width:150px;}
+.cc_name input {width:300px;}
+.cc_logos {
+	height:32px;
+	margin-bottom:5px;
+	position:absolute;
+    left:160px;
+    top:-4px;
+}
+.cc_logos .cc_icons {
+	background-image: url(img/creditcard_icons.png);
+	background-repeat: no-repeat;
+    float: left;
+    height: 36px;
+    margin-right: 4px;
+    text-indent: -9000px;
+    width: 36px;
+}
+.cc_logos .cc-visa {background-position: 0 0;}
+.cc_logos .cc-mc {background-position: -36px 0;}
+.cc_logos .cc-amex {background-position: -72px 0;}
+.cc_logos .cc-discover {background-position: -108px 0;}
+.cc_logos .cc-jcb {background-position: -180px 0;}
+.cc_cardinfo {width:400px}
+.cc_cardinfo .info_block {width:40%; float:left;}
+.cc_cardinfo .exp_month {width:40%; margin-right:9%;}
+.cc_cardinfo .exp_year {width:40%;}
+.cc_cardinfo .cc_ccv {position:relative;}
+.cc_cardinfo .cc_ccv input {width:50px;}
+.cc_cardinfo .ccv_img {background-image: url(img/creditcard_icons.png);
+	background-position: 0 -128px;
+	background-repeat: no-repeat;
+	display: block;
+	height: 23px;
+	left: 60px;
+	position: absolute;
+	width: 32px;
+	top:0
+}
+

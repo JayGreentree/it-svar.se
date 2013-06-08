@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml"
+itemscope itemtype="http://schema.org/Blog">
+
+{embed="embeds/html_header" {exp:channel:entries channel="reviews"} my_page_title="{channel_title} | {title}" page_content="{exp:eehive_hacksaw words="50"}{exp:low_replace find="<p>|</p>" replace="" multiple="yes"}{review_entry}{/exp:low_replace}{/exp:eehive_hacksaw}" og_url="{url_title_path='reviews/post'}{/exp:channel:entries}"}
+
+<body>
+
+<div id="home" class="active"></div>
+
+{lv_snippets_topnav}
+{lv_snippets_mainnav}
+{lv_modals_contact}
+{lv_modals_login}
+{lv_snippets_facebook_ini}
+
+{exp:ce_cache:it}
+<div class="container white">
+	<div class="row">
+		<div class="span12">
+			{exp:channel:entries channel="reviews" orderby="date" sort="desc" limit="1" pagination="bottom"}
+			<div class="page-header">
+				<h1>
+					<span style="float:right; padding-right:10px; color:#0088cc;">{entry_date format='%Y-%m-%d'}</span>
+					<a style="padding-left:10px;" href='{url_title_path='reviews/post'}'>{title}</a>
+				</h1>
+			</div>
+			<div class="padded rounded_top clearfix" style="padding-top:6px;">
+				<div class="well pull-right" style="padding:5px; margin-left:10px;">
+					{if avatar}
+						<img src="{avatar_url}" width="50px" height="50px" alt="{author}">
+					{/if}
+				</div>
+				{review_entry}
+			</div>
+			<div class="padded rounded_bottom clearfix" style="margin-bottom:18px;">
+				<span style="float:left; margin-right:27px; margin-left:4px;"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W5HGL9R9JQAC2" target="_blank"><img src="{lv_assets_siteurl}/images/site_images/donate.png"></a></span>
+				<span style="float:left; margin-left:4px;"><g:plusone size="medium" href="{url_title_path='reviews/post'}"></g:plusone></span>
+				<span style="float:left;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="{url_title_path='reviews/post'}" data-text="IT-FAQ.SE | {title} " data-via="patrickhvid" data-lang="sv" data-count="horizontal"></a></span>
+				<span style="float:left;"><fb:like href="{url_title_path='reviews/post'}" send="false" width="100" layout="button_count" show_faces="false" font="arial"/></span>
+				<span class="pull-right" style="text-align:right;">
+					{exp:gwcode_categories entry_id="{entry_id}" style="linear"}
+						<a class="btn btn-mini btn-success" style="font-size:0.9em; font-weight:normal; margin:0 0 5px 0;" href="/reviews/category/{complete_path}">{cat_name}</a>
+					{/exp:gwcode_categories}<br>
+					{exp:tagger:tags entry_id="{entry_id}" prefix="entry_tag" backspace="6"}
+						<a class="btn btn-mini btn-info" style="font-size:0.9em; font-weight:normal; margin:0 0 5px 0;" href="{site_url}/reviews/tags/{entry_tag:unitag}" title="{entry_tag:tag_name}">{entry_tag:tag_name}</a>
+					{/exp:tagger:tags}<br/>
+				</span>
+				<h2 style="margin-top:30px;">Kommentarer:</h2>
+				{exp:cx_disqus:comments entry_id="{entry_id}" title="Artiklar | {title}"}
+			</div>
+			{/exp:channel:entries}
+		</div>
+	</div>
+</div>
+<div class="container white">
+	<div class="row">
+		<div class="span12">
+			<div class="padded rounded_all clearfix" style="margin-top:16px;">
+				<h2>Taggmoln:</h2>
+				<center>
+					{exp:tagger:cloud limit="100" backspace="1" channel="reviews" sort="asc" prefix="tags"} 
+						<a class="btn btn-mini btn-info" href="{site_url}/reviews/tags/{tags:unitag}/" title="{tags:tag_name}">{tags:tag_name}</a>   
+					{/exp:tagger:cloud} 
+				</center>
+			</div> 
+		</div>
+	</div>
+{lv_snippets_footer}
+</div>
+
+{/exp:ce_cache:it}
+
+</body>
+</html>	

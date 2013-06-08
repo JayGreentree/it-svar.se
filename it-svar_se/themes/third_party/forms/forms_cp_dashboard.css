@@ -1,0 +1,10 @@
+#formsdash {width:93.6%; float:none; margin:20px 0 20px 3.3%; background-position:right -72px;}
+#formsdash .heading h2 {background-position:right -72px}
+#formsdash .heading h2 .abtn {display:none; text-shadow:none; margin-left:10px;}
+#formsdash .innerh {background-color: #ECF1F4; padding-bottom:20px; position:relative;}
+#formsdash .holder {width:100%; font-size: 13px; font-weight: bold;}
+#formsdash .holder th, #formsdash .holder td {text-align:left; color:#5F6C74; border-bottom: 1px solid #D0D7DF; border-top: 1px solid #FFF; padding: 5px 0 4px 15px;}
+#formsdash .holder th {color:#3b4348;}
+#formsdash .holder td a {display:block; padding:0 0 0 25px; background:url(img/dshbrd_form_icon.png) no-repeat left center; text-decoration:none}
+#formsdash .holder td a.loading {background:url(img/spinner.gif) no-repeat left center;}
+
